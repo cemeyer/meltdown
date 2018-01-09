@@ -278,7 +278,7 @@ static int check_config() {
     detect_flush_reload_threshold();
   }
   if (config.cache_miss_threshold <= 0) {
-    errno = ETIME;
+    errno = EINVAL;
     return -1;
   }
   return 0;
